@@ -5,6 +5,9 @@ class ConsultorsController < ApplicationController
   # GET /consultors.json
   def index
     @consultors = Consultor.all
+    respond_to do |format|
+      format.pdf {render template: 'products/pdf',pdf: 'reporte'}
+    end
   end
 
   # GET /consultors/1
