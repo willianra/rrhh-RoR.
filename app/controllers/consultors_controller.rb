@@ -6,7 +6,9 @@ class ConsultorsController < ApplicationController
   def index
     @consultors = Consultor.all
     respond_to do |format|
-      format.pdf {render template: 'products/pdf',pdf: 'reporte'}
+      format.html
+      format.json
+      format.pdf { render template: 'consultors/pdf', pdf: 'reporte'}
     end
   end
 
