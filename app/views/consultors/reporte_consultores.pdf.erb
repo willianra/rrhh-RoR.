@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <%= wicked_pdf_stylesheet_link_tag 'pdf' %>
+</head>
+<body>
+<h1>reporte de consultores</h1>
+    <table>
+    <thead>
+    <tr>
+     <th>nombre</th>
+     <th>apellido</th>
+    <tr>
+    </thead>
+    <tbody>
+      <% @consultors.each do |consultors| %>
+
+        <tr>
+        <td> <%= consultors.nombre %> </td>
+        <td> <%= consultors.apellido%></td>
+        <tr>
+          <% end %>
+    </tbody>
+    </table>
+</body>
+</html>
