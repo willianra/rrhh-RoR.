@@ -8,7 +8,7 @@ class ConsultorsController < ApplicationController
     respond_to do |format|
       format.html
       format.json
-      format.pdf { render template: 'consultors/reporte_consultores', pdf: 'reporte'}
+      format.pdf { render template: 'consultors/reporte_consultores', pdf: 'reporte',layout: 'pdf'}
     end
   end
 
